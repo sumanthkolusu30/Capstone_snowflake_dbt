@@ -1,0 +1,21 @@
+sources:
+  - name: raw_sources_before_snapshot
+    database: CAPSTONE_PROJECT
+    schema: RAW
+    loader: Data Taken from Azure Blob Storage.
+    description: Raw sources of the Capstone Project.
+    tables:
+      - name: campaign_data_ex
+        description: Raw Campaign data   
+      - name: customer_data_ex
+        description: Raw Customers data
+      - name: employee_data_ex
+        description: Raw Employees data   
+      - name: orders_data_ex
+        description: Raw Orders data
+      - name: product_data_ex
+        description: Raw Products data
+      - name: store_data_ex
+        description: Raw Stores data   
+      - name: supplier_data_ex
+        description: Raw Suppliers data
