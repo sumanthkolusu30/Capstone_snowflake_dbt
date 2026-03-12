@@ -1,0 +1,39 @@
+models:
+  - name: transformed_campaign_data
+    description: "Transformed Campaign Data Silver Schema."
+    columns:
+      - name: CAMPAIGN_ID
+        description: "Primary Key of the table"
+        data_tests:
+          - unique
+          - not_null
+      - name: START_DATE
+        description: "The date the campaign began."
+        data_tests:
+          - not_null
+      - name: END_DATE
+        description: "The date the campaign ended."
+        data_tests:
+          - not_null
+      - name: CAMPAIGN_DURATION
+        description: "Difference in days between Start and End dates."
+        data_tests:
+          - not_null
+      - name: BUDGET
+        description: "Campaign budget as a float."
+        data_tests:
+          - not_null
+      - name: TOTAL_REVENUE
+        description: "Total revenue generated."
+        data_tests:
+          - not_null
+      - name: EXPECTED_ROI
+        description: "Calculated ROI: (Revenue - Cost) / Cost."
+      - name: CHANNEL
+        description: "The marketing channel used."
+        data_tests:
+          - not_null
+      - name: CAMPAIGN_TYPE
+        description: "Category of the campaign."
+        data_tests:
+          - not_null
