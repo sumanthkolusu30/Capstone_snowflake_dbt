@@ -40,4 +40,7 @@ models:
     Raw_External_Tables:
       +schema: BRONZE
       +materialized: table
+    Transformed_Tables:
+      +schema: SILVER
+      +materialized: table
 

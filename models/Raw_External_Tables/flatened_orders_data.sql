@@ -28,7 +28,6 @@ SELECT
     f.value:billing_address.street::STRING AS billing_street,
     f.value:billing_address.city::STRING AS billing_city,
     f.value:billing_address.state::STRING AS billing_state,
-    f.value:billing_address.zip_code::STRING AS billing_zip,
-    f.value:order_items::VARIANT AS order_items
+    f.value:billing_address.zip_code::STRING AS billing_zip
 FROM raw_source,
 LATERAL FLATTEN(input => value:orders_data) f
