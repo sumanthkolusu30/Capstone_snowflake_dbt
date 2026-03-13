@@ -43,4 +43,7 @@ models:
     Transformed_Silver_Tables:
       +schema: SILVER
       +materialized: table
+    Gold_Tables:
+      +schema: GOLD
+      +materialized: table
 
