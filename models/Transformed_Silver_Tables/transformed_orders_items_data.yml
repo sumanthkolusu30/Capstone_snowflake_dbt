@@ -1,0 +1,28 @@
+models:
+  - name: transformed_orders_items_data
+    description: "Transformed Orders Items Data in Silver Schema."
+    columns:
+      - name: ORDER_ID
+        description: "OrderID of the Order."
+        data_tests:
+          - not_null
+      - name: COST_PRICE
+        description: "Cost Price of the Item."
+        data_tests:
+          - not_null
+      - name: DISCOINT_AMOUNT
+        description: "Discount on the Item."
+        data_tests:
+          - not_null
+      - name: PRODUCT_ID
+        description: "ProductID of the Item."
+        data_tests:
+          - not_null
+      - name: QUANTITY
+        description: "Quantity of the Item."
+        data_tests:
+          - not_null
+      - name: UNIT_PRICE
+        description: "Unit Price of the Item."
+        data_tests:
+          - not_null

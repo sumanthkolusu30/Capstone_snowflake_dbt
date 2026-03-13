@@ -1,0 +1,109 @@
+models:
+  - name: transformed_orders_data
+    description: "Transformed Orders Data in Silver Schema."
+    columns:
+      - name: ORDER_ID
+        description: "Primary Key of the table."
+        data_tests:
+          - unique
+          - not_null
+      - name: CUSTOMER_ID
+        description: "CustomerID of the Order."
+        data_tests:
+          - not_null
+      - name: STORE_ID
+        description: "StroreID of the Order."
+        data_tests:
+          - not_null
+      - name: EMPLOYEE_ID
+        description: "EmployeeID of the Order."
+        data_tests:
+          - not_null
+      - name: CAMPAIGN_ID
+        description: "CampaignID of the Order."
+        data_tests:
+          - not_null
+      - name: ORDER_STATUS
+        description: "Status of the Order."
+        data_tests:
+          - not_null
+      - name: ORDER_SOURCE
+        description: "Source of the Order."
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments: 
+                values: ['Website', 'Mobile App', 'In-Store']
+      - name: PAYMENT_METHOD
+        description: "Payment Method of the Order."
+        data_tests:
+          - not_null
+      - name: SHIPPING_METHOD
+        description: "Shipping Method of the Order."
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments: 
+                values: ['Standard', 'Express', 'Overnight']
+      - name: TOTAL_AMOUNT
+        description: "Total Amount of the Order."
+        data_tests:
+          - not_null
+      - name: SHIPPING_COST
+        description: "Shipping Cost of the Order."
+        data_tests:
+          - not_null
+      - name: TAX_AMOUNT
+        description: "Tax Amount of the Order."
+        data_tests:
+          - not_null
+      - name: CREATED_AT
+        description: "Order Created Date."
+        data_tests:
+          - not_null
+      - name: SHIPPING_DATE
+        description: "Shipping Date of the Order."
+        data_tests:
+          - not_null
+      - name: DELIVERY_DATE
+        description: "Delivery Date of the Order."
+        data_tests:
+          - not_null
+      - name: SHIPPING_STREET
+        description: "Shipping Street of the Order."
+        data_tests:
+          - not_null
+      - name: SHIPPING_CITY
+        description: "Shipping City of the Order."
+        data_tests:
+          - not_null
+      - name: SHIPPING_STATE
+        description: "Shipping State of the Order."
+        data_tests:
+          - not_null
+      - name: SHIPPING_ZIP
+        description: "Shipping Zip of the Order."
+        data_tests:
+          - not_null
+      - name: BILLING_STREET
+        description: "Billing Street of the Order."
+        data_tests:
+          - not_null
+      - name: BILLING_CITY
+        description: "Billing City of the Order."
+        data_tests:
+          - not_null
+      - name: BILLING_STATE
+        description: "Billing State of the Order."
+        data_tests:
+          - not_null
+      - name: BILLING_ZIP
+        description: "Billing Zip of the Order."
+        data_tests:
+          - not_null
+      - name: ORDER_TIME
+        description: "Time of the Order."
+        data_tests:
+          - accepted_values:
+              arguments: 
+                values: ['Morning', 'Night', 'Evening', 'Afternoon']

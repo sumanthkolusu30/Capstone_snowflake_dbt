@@ -1,11 +1,19 @@
 models:
   - name: transformed_campaign_data
-    description: "Transformed Campaign Data Silver Schema."
+    description: "Transformed Campaign Data in Silver Schema."
     columns:
       - name: CAMPAIGN_ID
-        description: "Primary Key of the table"
+        description: "Primary Key of the table."
         data_tests:
           - unique
+          - not_null
+      - name: CAMPAIGN_NAME
+        description: "Name of the Campaign."
+        data_tests:
+          - not_null
+      - name: CAMPAIGN_TYPE
+        description: "Type of the Campaign."
+        data_tests:
           - not_null
       - name: START_DATE
         description: "The date the campaign began."
@@ -15,8 +23,12 @@ models:
         description: "The date the campaign ended."
         data_tests:
           - not_null
-      - name: CAMPAIGN_DURATION
-        description: "Difference in days between Start and End dates."
+      - name: LAST_MODIFIED_DATE
+        description: "Last Modified Date of the record."
+        data_tests:
+          - not_null
+      - name: TOTAL_COST
+        description: "Total cost of the campaign."
         data_tests:
           - not_null
       - name: BUDGET
@@ -33,7 +45,9 @@ models:
         description: "The marketing channel used."
         data_tests:
           - not_null
-      - name: CAMPAIGN_TYPE
-        description: "Category of the campaign."
+      - name: AUDIENCE_LOCATION
+        description: "Location of the Audience."
         data_tests:
-          - not_null
+          - accepted_values:
+              arguments: 
+                values: ['Urban', 'Suburban', 'All Areas', 'Campus']

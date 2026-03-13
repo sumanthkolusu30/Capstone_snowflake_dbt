@@ -37,10 +37,13 @@ clean-targets:         # directories to be removed by `dbt clean`
 
 models:
   Capstone_snowflake_dbt:
-    Raw_External_Tables:
+    Flatened_Bronze_Tables:
       +schema: BRONZE
       +materialized: table
-    Transformed_Tables:
+    Transformed_Silver_Tables:
       +schema: SILVER
+      +materialized: table
+    Gold_Tables:
+      +schema: GOLD
       +materialized: table
 

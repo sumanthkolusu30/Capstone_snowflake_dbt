@@ -1,0 +1,64 @@
+models:
+  - name: transformed_supplier_data
+    description: "Transformed Supplier Data in Silver Schema."
+    columns:
+      - name: SUPPLIER_ID
+        description: "Primary Key of the table."
+        data_tests:
+          - unique
+          - not_null
+      - name: SUPPLIER_NAME
+        description: "Name of the Supplier."
+        data_tests:
+          - not_null
+      - name: SUPPLIER_TYPE
+        description: "Type of the Supplier."
+        data_tests:
+          - not_null
+      - name: PAYMENT_TERMS
+        description: "Payment Terms of the Supplier."
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments: 
+                values: ['NET 30', 'NET 45', 'NET 60', 'NET 90']
+      - name: CREDIT_RATING
+        description: "Credit Rating of the Supplier."
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments: 
+                values: ['A', 'B', 'C', 'D', 'E']
+      - name: TAX_ID
+        description: "TaxID of the Supplier."
+        data_tests:
+          - not_null
+      - name: FULL_ADDRESS
+        description: "Address of the Supplier."
+        data_tests:
+          - not_null
+      - name: ON_TIME_DELIVERY_RATE
+        description: "On time delivery rate of the Supplier."
+        data_tests:
+          - not_null
+      - name: AVG_DELAY_DAYS
+        description: "Average delay days of the Supplier."
+        data_tests:
+          - not_null
+      - name: MINIMUM_ORDER_QUANTITY
+        description: "Minimum order quantity of the Supplier."
+        data_tests:
+          - not_null
+      - name: PREFERRED_CARRIER
+        description: "Preferred carrier of the Supplier."
+        data_tests:
+          - not_null
+      - name: QUALITY_RATING
+        description: "Quality Rating of the Supplier."
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments: 
+                values: ['Good', 'Poor', 'Average', 'Excellent']
+
+
