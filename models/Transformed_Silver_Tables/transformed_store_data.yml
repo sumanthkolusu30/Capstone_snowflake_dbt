@@ -1,0 +1,55 @@
+models:
+  - name: transformed_store_data
+    description: "Transformed Store Data in Silver Schema."
+    columns:
+      - name: STORE_ID
+        description: "Primary Key of the table."
+        data_tests:
+          - unique
+          - not_null
+      - name: STORE_NAME
+        description: "Name of the Store."
+        data_tests:
+          - not_null
+      - name: REGION
+        description: "Region of the Store."
+        data_tests:
+          - not_null
+      - name: STORE_TYPE
+        description: "Type of the Store."
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments: 
+                values: ['Outlet', 'Express', 'Department', 'Flagship']
+      - name: MANAGER_ID
+        description: "ManagerID of the Manager of the Store."
+        data_tests:
+          - not_null
+      - name: SIZE_SQ_FT
+        description: "Size of the Store."
+        data_tests:
+          - not_null
+      - name: SIZE_CATEGORY
+        description: "Size Category of the Store."
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments: 
+                values: ['Small', 'Medium', 'Large']
+      - name: MONTHLY_RENT
+        description: "Monthly Rent of the Store."
+        data_tests:
+          - not_null
+      - name: SALES_TARGET
+        description: "Sales Target of the Store."
+        data_tests:
+          - not_null
+      - name: CURRENT_SALES
+        description: "Current Sales of the Store."
+        data_tests:
+          - not_null
+      - name: OPENING_DATE
+        description: "Opening date of the Store."
+        data_tests:
+          - not_null

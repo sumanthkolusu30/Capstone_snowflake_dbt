@@ -1,0 +1,66 @@
+models:
+  - name: transformed_customer_data
+    description: "Transformed Customer Data in Silver Schema."
+    columns:
+      - name: CUSTOMER_ID
+        description: "Primary Key of the table."
+        data_tests:
+          - unique
+          - not_null
+      - name: FIRST_NAME
+        description: "First Name of the Customer."
+        data_tests:
+          - not_null      
+      - name: LAST_NAME
+        description: "Last Name of the Customer."
+        data_tests:
+          - not_null
+      - name: EMAIL
+        description: "Email of the Customer."
+        data_tests:
+          - not_null
+      - name: PHONE
+        description: "Phone number of the Customer."
+        data_tests:
+          - not_null
+      - name: STREET
+        description: "Address of the Customer."
+        data_tests:
+          - not_null
+      - name: CITY
+        description: "Address of the Customer."
+        data_tests:
+          - not_null
+      - name: STATE
+        description: "Address of the Customer."
+        data_tests:
+          - not_null
+      - name: ZIP_CODE
+        description: "Address of the Customer."
+        data_tests:
+          - not_null
+      - name: COUNTRY
+        description: "Address of the Customer."
+        data_tests:
+          - not_null
+      - name: PREFERRED_COMMUNICATION
+        description: "Preferred Communication by the Customer."
+        data_tests:
+          - not_null
+      - name: LOYALTY_TIER
+        description: "Loyalty Tier of the Customer."
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments: 
+                values: ['Platinum', 'Bronze', 'Gold', 'Silver']
+      - name: PREFERRED_PAYMENT_METHOD
+        description: "Payment method preferred by the customer."
+        data_tests:
+          - not_null
+      - name: CUSTOMER_SEGMENT
+        description: "Segment Categorization of customer."
+        data_tests:
+          - accepted_values:
+              arguments: 
+                values: ['Young', 'Senior', 'Middle-aged', 'Unknown']

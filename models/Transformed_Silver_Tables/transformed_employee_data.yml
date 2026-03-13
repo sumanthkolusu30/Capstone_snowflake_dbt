@@ -1,0 +1,73 @@
+models:
+  - name: transformed_employee_data
+    description: "Transformed Employee Data in Silver Schema."
+    columns:
+      - name: EMPLOYEE_ID
+        description: "Primary Key of the table."
+        data_tests:
+          - unique
+          - not_null
+      - name: FIRST_NAME
+        description: "First Name of the Employee."
+        data_tests:
+          - not_null
+      - name: LAST_NAME
+        description: "Last Name of the Employee."
+        data_tests:
+          - not_null
+      - name: EMAIL
+        description: "Email of the Employee."
+        data_tests:
+          - not_null
+      - name: PHONE
+        description: "Phone number of the Employee."
+        data_tests:
+          - not_null
+      - name: ROLE
+        description: "Role of the Employee."
+        data_tests:
+          - not_null
+      - name: DEPARTMENT
+        description: "Department of the Employee."
+        data_tests:
+          - not_null
+          - accepted_values:
+              arguments: 
+                values: ['Inventory', 'Customer Service', 'Operations', 'Sales']
+      - name: WORK_LOCATION
+        description: "Work Location of the Employee."
+        data_tests:
+          - not_null
+      - name: EMPLOYMENT_STATUS
+        description: "Employment Status of the Employee."
+        data_tests:
+          - not_null
+      - name: EDUCATION
+        description: "Education of the Employee."
+        data_tests:
+          - not_null
+      - name: HIRE_DATE
+        description: "Hire Date of the Employee."
+        data_tests:
+          - not_null
+      - name: DATE_OF_BIRTH
+        description: "Date of Birth of the Employee."
+        data_tests:
+          - not_null
+      - name: SALARY
+        description: "Salary of the Employee."
+        data_tests:
+          - not_null
+      - name: SALES_TARGET
+        description: "Sales Target of the Employee."
+        data_tests:
+          - not_null
+      - name: CURRENT_SALES
+        description: "Current Sales of the Employee."
+        data_tests:
+          - not_null
+      - name: PERFORMANCE_RATING
+        description: "Performance Rating of the Employee."
+        data_tests:
+          - not_null
+     
