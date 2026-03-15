@@ -12,6 +12,7 @@ SELECT
     P.PRODUCT_KEY,
     S.STORE_KEY,
     DAT.DATE_KEY,
+    O.ORDER_DATE,
     {{ dbt_utils.generate_surrogate_key(['O.EMPLOYEE_ID']) }} as EMPLOYEE_KEY,
     {{ dbt_utils.generate_surrogate_key(['O.CAMPAIGN_ID']) }} as CAMPAIGN_KEY,
     OI.QUANTITY AS QUANTITY_SOLD,
