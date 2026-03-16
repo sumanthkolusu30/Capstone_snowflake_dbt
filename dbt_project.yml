@@ -46,4 +46,7 @@ models:
     Gold_Tables:
       +schema: GOLD
       +materialized: table
+    Gold_Views:
+      +schema: GOLD
+      +materialized: view
 
