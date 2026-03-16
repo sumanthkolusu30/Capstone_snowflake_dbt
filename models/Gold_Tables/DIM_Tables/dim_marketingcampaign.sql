@@ -5,6 +5,7 @@ SELECT
     {{ dbt_utils.generate_surrogate_key(['CAMPAIGN_ID']) }} as CAMPAIGN_KEY,
     CAMPAIGN_ID,
     AUDIENCE_SEGMENT,
+    CAMPAIGN_TYPE,
     BUDGET,
     TOTAL_COST,
     CAMPAIGN_DURATION,

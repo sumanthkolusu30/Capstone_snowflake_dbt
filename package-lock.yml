@@ -5,4 +5,7 @@ packages:
   - name: dbt_date
     package: godatadriven/dbt_date
     version: 0.17.1
-sha1_hash: aff35f75bf3757f4704c874883053e17791a7ff6
+  - name: elementary
+    package: elementary-data/elementary
+    version: 0.16.1
+sha1_hash: 26c46ea6d06798d30e21a88fbbce0ff7fc4dbeb7
